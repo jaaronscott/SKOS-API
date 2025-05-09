@@ -1,7 +1,7 @@
 {
   "name": "nordic_sweater_ui",
   "version": "1.0.0",
-  "main": "index.js",
+  "private": true,
   "dependencies": {
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
