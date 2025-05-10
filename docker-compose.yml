@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "0.0.0.0:5000:5000"
+    networks:
+      - reflective-net
+    environment:
+      - FLASK_ENV=development
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "0.0.0.0:3000:3000"
+    networks:
+      - reflective-net
+
+networks:
+  reflective-net:
+    driver: bridge
